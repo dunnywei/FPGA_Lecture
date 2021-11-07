@@ -1,0 +1,33 @@
+Section 5 LED (https://www.bilibili.com/video/BV17z411i7er?p=5)
+	-FPGA design (1:21)
+	-Process of designing and implementation (2:21)
+	-Example of LED
+	-Four folders
+		-doc
+		-Quartus_proj
+		-RTL->like register 
+		-Sim (07:52)
+	-Design Plan (8:31)
+		-Use keyboard
+		-One module can do it
+		-Use Key 1 to toggle LED
+			-non press->high as 3.3V
+			-press->low as 0 V (10:00)
+		-LED (10:11)
+			-If LED0 is 0-> LED light  in D6 will be ON
+			-IF LED0 is 1 as 3.3V->LED light is OFF(10:45)
+			-芯片选型 (10:56) xilinx check->https://cloud.tencent.com/developer/article/1653585
+	-Draw Wave form (11:30)
+		-"LED in" to LED to "LED out" (16:08)
+	-wave (18:41)
+	-When key is pressed->led on otherwise it is off (18:41)
+	-code (18:50)(19:04)
+module led
+(
+
+);
+
+endmodule
+	-
+	-
+	-
