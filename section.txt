@@ -1,4 +1,4 @@
-Section 5 LED (https://www.bilibili.com/video/BV17z411i7er?p=5)
+Section_005 LED (https://www.bilibili.com/video/BV17z411i7er?p=5)
 	-FPGA design (1:21)
 	-Process of designing and implementation (2:21)
 	-Example of LED
@@ -21,13 +21,25 @@ Section 5 LED (https://www.bilibili.com/video/BV17z411i7er?p=5)
 		-"LED in" to LED to "LED out" (16:08)
 	-wave (18:41)
 	-When key is pressed->led on otherwise it is off (18:41)
-	-code (18:50)(19:04)
+	-code (18:50)(19:04)(19:48)
 module led
 (
-
+   input wire key_in,
+   output wire led_out
 );
+assign led_out=key_in;
 
 endmodule
+	-(19:48 and beyond) how to use QuatusII
+	-We kwow the waves we have vs what we want=match so simulation (仿真) is done(28:14)
+	-synthesize(综合) as FPGA
+	-binding the pins (引脚) (29:30)
+	-Test with board (30:50)
+	-Finalize the code in FPGA otherwise it won't save it permanetly (31:52)
+Section_006:Simple combination logic 组合逻辑 for mux(多路复用器)
+	-Theory (00:56)
+	-Practice (03:21)
+	-2 inputs ,one selection and one output (03:21)
 	-
 	-
 	-
