@@ -36,10 +36,19 @@ endmodule
 	-binding the pins (引脚) (29:30)
 	-Test with board (30:50)
 	-Finalize the code in FPGA otherwise it won't save it permanetly (31:52)
-Section_006:Simple combination logic 组合逻辑 for mux(多路复用器)
+Section_006:Simple combination logic 组合逻辑 for mux(多路复用器) (part 1)
 	-Theory (00:56)
 	-Practice (03:21)
 	-2 inputs ,one selection and one output (03:21)
-	-
-	-
-	-
+	-Key 1 as input, key 2 as input,key 3 as Chip select and D6 (LED) as output (4:19)
+	-when key is NON pressed->High (4:27)
+	-when key is pressed->Low
+	-LED light is active low (4:32)
+	-Practice(4:46)
+	-Draw wave diagram (5:49)
+	-Draw rectangle (06:23)(07:21)
+	-Wave form (11:04)
+	-IF select high, output should be the same as Key1 at that instant not before the the red line
+	-If select low, output should be the same as key 2 as input at that instant not before the the red line(19:47)(20:59)
+	
+Section_007:Simple combination logic 组合逻辑 for mux(多路复用器) (part 2)
