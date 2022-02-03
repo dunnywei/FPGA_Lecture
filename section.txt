@@ -1,3 +1,9 @@
+Setcion_004
+        reg [7:0] cnt 
+	always(posedge sys_clk)
+           cnt<=cnt+1
+
+
 Section_005 LED (https://www.bilibili.com/video/BV17z411i7er?p=5)
 	-FPGA design (1:21)
 	-Process of designing and implementation (2:21)
