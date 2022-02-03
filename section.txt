@@ -1,7 +1,25 @@
 Setcion_004
-        reg [7:0] cnt 
-	always(posedge sys_clk)
-           cnt<=cnt+1
+module Example_00(
+//    input sys_clk,
+//    output [7:0] y
+    );
+     reg [7:0] cnt;
+     reg sys_clk, _output;
+     initial begin
+     cnt<=8'd5;
+     sys_clk=1'b0;
+     _output=1'b0;
+     end
+     
+     always sys_clk = #10 ~sys_clk;
+     
+     always @(posedge sys_clk)
+        cnt<=cnt+1;  
+        
+  //   assign y=cnt;
+     
+    
+endmodule
 
 
 Section_005 LED (https://www.bilibili.com/video/BV17z411i7er?p=5)
