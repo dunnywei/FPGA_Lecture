@@ -20,7 +20,7 @@ module Example_00(
 endmodule
 
 -----------------------------------Part00:end of counter--------------------------------------------------------------------
------------------------------------Part01:Start of SPI--------------------------------------------------------------------
+-----------------------------------Part01:Start of Counter--------------------------------------------------------------------
 module testbench;
      reg sys_clk;
      wire CS,MOSI,MISO;
@@ -54,9 +54,47 @@ module Example_00(
     
     
     assign MOSI=sys_clk;
-    
-    
-    
 endmodule
------------------------------------Part01:End of SPI--------------------------------------------------------------------
+-----------------------------------Part01:End of Counter--------------------------------------------------------------------
+-----------------------------------Part02:Start of Counter--------------------------------------------------------------------
+    module top(
+    input wire [7:0] MISO,
+    output reg [7:0] MOSI,
+    output reg CS,
+    input wire [7:0] CLK
+    );
+    reg [7:0] counter;
+    initial begin
+    
+    MOSI<=8'b0;
+    counter<=8'b0;
+    end
+    always@(posedge CLK[0])
+    begin  
+       CS=CLK[0];
+       MOSI=MOSI+1;
+    end 
+endmodule
+module testbench;
+
+   reg [7:0] MISO=8'b0;
+   wire [7:0] MOSI;
+   wire CS;
+   reg [7:0] CLK;
+   
+   top uut(MISO,MOSI,CS,CLK);
+   
+    integer k=0;
+    
+    initial
+    begin
+        CLK=0;
+        for(k=0;k<100;k=k+1)
+        #10 CLK=k;  //given 100 ns
+        
+        #5 $finish;
+        
+    end
+endmodule
+-----------------------------------Part02:End of Counter--------------------------------------------------------------------
 
